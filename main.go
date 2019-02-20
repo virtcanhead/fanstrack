@@ -83,6 +83,8 @@ func main() {
 	if _, err = client.Index().Index(indexName(record.Timestamp)).Type("_doc").BodyJson(record).Do(context.Background()); err != nil {
 		panic(err)
 	}
+
+	fmt.Println("Success: UID=%d, Followers=%d, Following=%d", record.UserID, record.Follower, record.Following)
 }
 
 func indexName(t time.Time) string {
