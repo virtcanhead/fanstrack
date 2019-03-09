@@ -84,7 +84,7 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Println("Success: UID=%d, Followers=%d, Following=%d", record.UserID, record.Follower, record.Following)
+	fmt.Printf("Success: UID=%d, Followers=%d, Following=%d\n", record.UserID, record.Follower, record.Following)
 }
 
 func indexName(t time.Time) string {
